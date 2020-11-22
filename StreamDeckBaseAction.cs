@@ -61,6 +61,13 @@ namespace StreamDeck.NET
         }
 
         /// <inheritdoc />
+        public virtual Task SendToPlugin(StreamDeckSendToPluginEventMessage message)
+        {
+            return Task.CompletedTask;
+        }
+
+
+        /// <inheritdoc />
         public virtual void Dispose()
         {
         }

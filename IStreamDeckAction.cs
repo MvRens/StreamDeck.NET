@@ -61,5 +61,11 @@ namespace StreamDeck.NET
         /// </summary>
         /// <param name="message">The message information passed by Stream Deck.</param>
         Task PropertyInspectorDidDisappear(StreamDeckPropertyInspectorDidDisappearEventMessage message);
+
+        /// <summary>
+        /// Called when the Property Inspector sends a sendToPlugin event.
+        /// </summary>
+        /// <param name="message">The message information passed by Stream Deck.</param>
+        Task SendToPlugin(StreamDeckSendToPluginEventMessage message);
     }
 }

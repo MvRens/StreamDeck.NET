@@ -163,7 +163,8 @@ namespace StreamDeck.NET
         didReceiveSettings,
         didReceiveGlobalSettings,
         propertyInspectorDidAppear,
-        propertyInspectorDidDisappear
+        propertyInspectorDidDisappear,
+        sendToPlugin    // Note: this one does not appear in the official defines
     }
     #pragma warning restore 1591
 }

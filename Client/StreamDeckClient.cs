@@ -72,6 +72,7 @@ namespace StreamDeck.NET.Client
             RegisterActionEvent<StreamDeckDidReceiveSettingsEventMessage>(ESDSDKEventType.didReceiveSettings, (action, message) => action.DidReceiveSettings(message));
             RegisterActionEvent<StreamDeckPropertyInspectorDidAppearEventMessage>(ESDSDKEventType.propertyInspectorDidAppear, (action, message) => action.PropertyInspectorDidAppear(message));
             RegisterActionEvent<StreamDeckPropertyInspectorDidDisappearEventMessage>(ESDSDKEventType.propertyInspectorDidDisappear, (action, message) => action.PropertyInspectorDidDisappear(message));
+            RegisterActionEvent<StreamDeckSendToPluginEventMessage>(ESDSDKEventType.sendToPlugin, (action, message) => action.SendToPlugin(message));
 
             RegisterGlobalEvent<StreamDeckDeviceDidConnectEventMessage>(ESDSDKEventType.deviceDidConnect, (globalEvent, message) => globalEvent.DeviceDidConnect(message));
             RegisterGlobalEvent<StreamDeckDeviceDidDisconnectEventMessage>(ESDSDKEventType.deviceDidDisconnect, (globalEvent, message) => globalEvent.DeviceDidDisconnect(message));
@@ -511,7 +512,7 @@ namespace StreamDeck.NET.Client
             {
                 await client.QueueMessage(new StreamDeckSendToPropertyInspectorMessage
                 {
-                    Event = StreamDeckConsts.kESDSDKEventSwitchToProfile,
+                    Event = StreamDeckConsts.kESDSDKEventSendToPropertyInspector,
                     Context = GetContext(),
                     Action = action,
                     Payload = payload

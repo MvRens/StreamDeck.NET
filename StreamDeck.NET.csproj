@@ -72,6 +72,7 @@
     <Compile Include="Message\Payload\StreamDeckActionSettingsPayload.cs" />
     <Compile Include="Message\Interface\IStreamDeckPayloadMessage.cs" />
     <Compile Include="Message\Received\StreamDeckDidReceiveGlobalSettingsEventMessage.cs" />
+    <Compile Include="Message\Received\StreamDeckSendToPluginEventMessage.cs" />
     <Compile Include="Message\Received\StreamDeckSystemDidWakeUpEventMessage.cs" />
     <Compile Include="Message\Received\StreamDeckApplicationDidTerminateEventMessage.cs" />
     <Compile Include="Message\Received\StreamDeckApplicationDidLaunchEventMessage.cs" />
